@@ -30,6 +30,16 @@ class filmeService {
             console.log(error)
         }
     }
+
+    // Método para deletar filmes
+    async Delete(id) {
+        try{
+            await Filme.findByIdAndDelete(id);
+            console.log(`Filme com a id: ${id} foi deletado!`);
+        } catch (error) {
+            console.log(error)
+        }
+    }
 };
 
 export default new filmeService();

@@ -1,5 +1,7 @@
 // importação do filmeService
 import filmeService from "../services/filmeService.js";
+// Importando o objectID para identificar cada filme
+import { ObjectId } from 'mongodb';
 
 // Função assíncrona chamando o método getAll
 const getAllFilmes = async (req, res) => {
@@ -24,4 +26,20 @@ const createFilme = async(req,res) => {
     }
 }
 
-export default { getAllFilmes, createFilme };
+// Deletando um filme
+const deleteFilme = async (req, res) => {
+    try{
+        if(ObjectId.isValid(req.params.id)){
+            const id = req.params.id
+            filmeService.Delete(id)
+            res.sendStatus(204) //No content
+        } else {
+            res.sendStatus(400) //bad request
+        }
+    } catch(error) {
+        console.log(error)
+        res.status(500).json({ error: 'Erro interno de servidor' })
+    }
+}
+
+export default { getAllFilmes, createFilme, deleteFilme };
