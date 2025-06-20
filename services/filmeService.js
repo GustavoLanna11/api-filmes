@@ -11,6 +11,25 @@ class filmeService {
             console.log(error);
         }
     }
+
+    // Método para cadastrar novos filmes
+    async Create(title, year, genre, ageRating, director, language, synopsis, duration) {
+        try{
+            const newFilme = new Filme({
+                title,
+                year,
+                genre,
+                ageRating,
+                director,
+                language,
+                synopsis,
+                duration
+            })
+            await newFilme.save()
+        } catch(error) {
+            console.log(error)
+        }
+    }
 };
 
 export default new filmeService();
