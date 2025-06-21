@@ -19,7 +19,8 @@ import userRoutes from "./routes/userRoutes.js";
 // Configuração do Express
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use("/", filmeRoutes)
+app.use("/", filmeRoutes);
+app.use("/", userRoutes);
 
 // Rodando a API
 const port = 4000;
