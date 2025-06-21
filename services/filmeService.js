@@ -40,6 +40,30 @@ class filmeService {
             console.log(error)
         }
     }
+
+    // Método para alterar os dados
+    async Update(id, title, year, genre, ageRating, director, language, synopsis, duration) {
+        try{
+            const updatedFilme = await Filme.findByIdAndUpdate(
+                id,
+                {
+                    title,
+                    year,
+                    genre,
+                    ageRating,
+                    director,
+                    language,
+                    synopsis,
+                    duration
+                },
+                { new: true }
+            );
+            console.log(`Dados do Filme com id: ${id} alterados com sucesso.`);
+            return updatedFilme;
+        } catch(error) {
+            console.log(error);
+        }
+    }
 };
 
 export default new filmeService();

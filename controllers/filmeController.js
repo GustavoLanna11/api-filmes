@@ -42,4 +42,21 @@ const deleteFilme = async (req, res) => {
     }
 }
 
-export default { getAllFilmes, createFilme, deleteFilme };
+// Alterando um Filme
+const updateFilme = async(req,res) => {
+    try{
+        if(ObjectId.isValid(req.params.id)) {
+            const id = req.params.id;
+            const { title, year, genre, ageRating, director, language, synopsis, duration } = req.body;
+            const filme = await filmeService.Update( id, title, year, genre, ageRating, director, language, synopsis, duration );
+            res.status(200).json({ filme });
+        } else {
+            res.sendStatus(400); 
+        }
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(500);
+    }
+}
+
+export default { getAllFilmes, createFilme, deleteFilme, updateFilme };
