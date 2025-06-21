@@ -64,6 +64,16 @@ class filmeService {
             console.log(error);
         }
     }
+
+    // Listando um único registro
+    async getOne(id){
+        try{
+            const filme = await Filme.findOne({_id: id})
+            return filme
+        } catch (error) {
+            console.log(error)
+        }
+    }
 };
 
 export default new filmeService();

@@ -59,4 +59,24 @@ const updateFilme = async(req,res) => {
     }
 }
 
-export default { getAllFilmes, createFilme, deleteFilme, updateFilme };
+// Listando um único filme
+const getOneFilme = async(req, res) => {
+    try{
+        if (ObjectId.isValid(req.params.id)) {
+            const id = req.params.id
+            const filme = await filmeService.getOne(id)
+            if(!filme) {
+                res.sendStatus(404) //filme não encontrado
+            } else {
+                res.status(200).json({filme})
+            }
+        } else {
+            res.sendStatus(400)
+        }
+    } catch(error) {
+        console.log(error)
+        res.sendStaus(500)
+    }
+}
+
+export default { getAllFilmes, createFilme, deleteFilme, updateFilme, getOneFilme };
