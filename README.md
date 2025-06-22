@@ -15,10 +15,9 @@ Esta é uma API RESTful voltada para o gerenciamento de um catálogo de filmes, 
 <hr>
 <h3>🛠️ Tecnologias</h3>
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) + ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) <br>
 ⚡ Express.js  
 🍃 MongoDB  
 🧬 Mongoose  
 🔐 JWT (JSON Web Token)  
 📘 Swagger  
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
