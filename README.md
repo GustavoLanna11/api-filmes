@@ -37,7 +37,9 @@ Caso elas não se instalem automaticamente, instale uma por uma: <br>
 `npm install mongoose` <br>
 `npm install mongodb` <br>
 `npm install jsonwebtoken` <br><br>
-Por fim, basta utilizar o projeto, abra o swagger em: <br>
+
+Antes de começar a utilizar o projeto, é necessário configurar o ambiente de banco de dados, para isso, instale o MongoDB Compass e crie a conexão padrão, no caso a `localhost:27017`, após criada, inicie a mesma. <br><br>
+Por fim, abra o swagger em: <br>
 `localhost:4000/api-docs/`<br>
 E posteriormente o Insomnia ou Postman para verificar como cada requisição se comporta na prática.
 <hr>
