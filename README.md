@@ -1,2 +1,13 @@
 # api-filmes
-API Restful desenvolvida em Node.js com o objetivo de fornecer informações sobre filmes, como títulos, categorias, descrições e mais.
+<h1>Sobre a API</h1>
+Esta é uma API RESTful voltada para o gerenciamento de um catálogo de filmes, permitindo que os usuários autenticados realizem cadastro, listagem, edição, visualização individual (ou total) e exclusão de filmes. Todo o fluxo é protegido por um sistema de autenticação com JSON Web Token (JWT).
+<hr>
+
+<h1>Funcionalidades 📌</h1> <br>
+- ✅ Cadastro de usuários <br>
+- 🔐 Login com autenticação via JWT <br>
+- 🎞️ Cadastro de filmes <br>
+- 📋 Listagem de todos os filmes <br>
+- 🔎 Busca de filme por ID <br>
+- ✏️ Atualização de informações de um filme <br>
+- ❌ Exclusão de filmes do catálogo <br>
