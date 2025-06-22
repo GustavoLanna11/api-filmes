@@ -3,7 +3,7 @@ const swaggerOptions = {
     openapi: "3.0.0", 
     info: {
       title: "API Filmes",
-      description: "API para catálogo de Filmes",
+      description: "API para catálogo de Filmes, permitindo o cadastro, edição e exclusão dos filmes, através de uma autenticação de usuário.",
       version: "1.0",
       contact: {
         name: "Gustavo Lanna",

@@ -1,0 +1,325 @@
+paths:
+  # --- Endpoints para Filmes ---
+
+  /filmes:
+    get:
+      summary: Esse endpoint é responsável por retornar a listagem de todos os filmes cadastrados no banco de dados.
+      tags: [Filmes]
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Lista de Filmes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      example: "6782b9b16d6ea34ace5bd199"
+                    title:
+                      type: string
+                      example: "Titanic"
+                    year:
+                      type: integer
+                      example: 2012
+                    genre:
+                      type: string
+                      example: "Drama/Romance"
+                    ageRating:
+                      type: integer
+                      example: 12
+                    director:
+                      type: string
+                      example: "James Cameron"
+                    language:
+                      type: string
+                      example: "Inglês"
+                    synopsis:
+                      type: string
+                      example: "Titanic é um filme de 1997 que conta a história de Jack Dawson..."
+                    duration:
+                      type: integer
+                      example: 200
+        500:
+          description: Erro interno do servidor
+
+  /filme/{id}:
+    get:
+      summary: Esse endpoint retorna os dados de um único filme com base no ID informado.
+      tags: [Filmes]
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID do filme a ser consultado
+          schema:
+            type: string
+            example: 6782b9b16d6ea34ace5bd199
+      responses:
+        200:
+          description: Dados do filme encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                    example: "6782b9b16d6ea34ace5bd199"
+                  title:
+                    type: string
+                    example: "Titanic"
+                  year:
+                    type: integer
+                    example: 2012
+                  genre:
+                    type: string
+                    example: "Drama/Romance"
+                  ageRating:
+                    type: integer
+                    example: 12
+                  director:
+                    type: string
+                    example: "James Cameron"
+                  language:
+                    type: string
+                    example: "Inglês"
+                  synopsis:
+                    type: string
+                    example: "Titanic é um filme de 1997..."
+                  duration:
+                    type: integer
+                    example: 200
+        404:
+          description: Filme não encontrado
+        500:
+          description: Erro interno do servidor
+
+    delete:
+      summary: Deleta um filme com base no ID informado
+      tags: [Filmes]
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID do filme a ser deletado
+          schema:
+            type: string
+            example: 6782b9b16d6ea34ace5bd199
+      responses:
+        200:
+          description: Filme deletado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Filme deletado com sucesso."
+        404:
+          description: Filme não encontrado
+        500:
+          description: Erro interno do servidor
+
+    put:
+      summary: Atualiza os dados de um filme com base no ID informado.
+      tags: [Filmes]
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID do filme a ser atualizado
+          schema:
+            type: string
+            example: 6782b9b16d6ea34ace5bd199
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: "Titanic"
+                year:
+                  type: integer
+                  example: 2012
+                genre:
+                  type: string
+                  example: "Drama/Romance"
+                ageRating:
+                  type: integer
+                  example: 12
+                director:
+                  type: string
+                  example: "James Cameron"
+                language:
+                  type: string
+                  example: "Inglês"
+                synopsis:
+                  type: string
+                  example: "Titanic é um filme de 1997..."
+                duration:
+                  type: integer
+                  example: 200
+      responses:
+        200:
+          description: Filme atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Filme atualizado com sucesso."
+        404:
+          description: Filme não encontrado
+        500:
+          description: Erro interno do servidor
+
+  /filme:
+    post:
+      summary: Esse endpoint é responsável por cadastrar um filme.
+      tags: [Filmes]
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: "Titanic"
+                year:
+                  type: integer
+                  example: 2012
+                genre:
+                  type: string
+                  example: "Drama/Romance"
+                ageRating:
+                  type: integer
+                  example: 12
+                director:
+                  type: string
+                  example: "James Cameron"
+                language:
+                  type: string
+                  example: "Inglês"
+                synopsis:
+                  type: string
+                  example: "Titanic é um filme de 1997..."
+                duration:
+                  type: integer
+                  example: 200
+      responses:
+        201:
+          description: Filme cadastrado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Filme cadastrado com sucesso."
+        500:
+          description: Erro interno do servidor
+
+
+  # --- Endpoints para Usuários ---
+
+  /user:
+    post:
+      summary: Cadastra um novo usuário.
+      tags: [Usuários]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - password
+              properties:
+                name:
+                  type: string
+                  example: "usuario123"
+                email:
+                  type: string
+                  format: email
+                  example: "usuario@example.com"
+                password:
+                  type: string
+                  format: password
+                  example: "senhaSegura123"
+      responses:
+        201:
+          description: Usuário criado com sucesso.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Usuário criado com sucesso."
+        400:
+          description: Dados inválidos
+        500:
+          description: Erro interno do servidor
+
+  /auth:
+    post:
+      summary: Realiza login de usuário e retorna um token JWT.
+      tags: [Login]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: "usuario@example.com"
+                password:
+                  type: string
+                  format: password
+                  example: "senhaSegura123"
+      responses:
+        200:
+          description: Login realizado com sucesso, retorna token JWT.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        401:
+          description: Credenciais inválidas
+        500:
+          description: Erro interno do servidor
