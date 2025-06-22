@@ -43,5 +43,11 @@ Por fim, abra o swagger em: <br>
 `localhost:4000/api-docs/`<br>
 E posteriormente o Insomnia ou Postman para verificar como cada requisição se comporta na prática.
 <hr>
+<h3>Outras Informações</h3>
+A partir do momento que se tem a API rodando, o banco de dados conectado e irá se fazer uma requisição, lembre que o fluxo é o seguinte:<br><br>
+• Criação de usuário com nome, email e senha. <br>
+• Login do usuário criado + geração de token de acesso. <br>
+• Consumo dos endpoints de catálogo de filmes sempre passando o token de acesso para autenticação. <br>
 
+<hr>
 <h3>Gustavo Lanna - 2025</h3>
