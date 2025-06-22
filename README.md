@@ -24,6 +24,17 @@ Para o desenvolvimento da API foram usadas as tecnologias listadas abaixo, cada 
 📘 Swagger   <br>
 
 <hr>
+<h3>🧱 Estrutura </h3>
+Este projeto segue uma arquitetura em camadas, inspirada no padrão MVC desacoplado, com separação clara entre responsabilidades. A estrutura é pensada para facilitar a manutenção, testes e escalabilidade. <br><br>
+• config/ Configurações da aplicação. <br>
+• controllers/ Camada que lida com as requisições e respostas (lógica de entrada e saída) <br>
+• docs/ Documentação da API com Swagger <br>
+• middleware/ Funções intermediárias como autenticação. <br>
+• models/ Definição dos modelos de dados, ODM. <br>
+• routes/ Definição dos endpoints e associações com os controllers. <br>
+• services/ Regra de negócio e lógica da aplicação, camada intermediária entre controllers e models. <br><br>
+
+<hr>
 <h3>❓ Como rodar o projeto?</h3>
 No seu computador, será necessário clonar o repositório. Após estar com a url em mãos, abra o 'git bash here' e use: <br>
 
