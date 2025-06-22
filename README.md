@@ -15,7 +15,7 @@ Esta é uma API RESTful voltada para o gerenciamento de um catálogo de filmes, 
 <hr>
 <h3>🛠️ Tecnologias</h3>
 
-🟢 Node.js + ✏️ JavaScript | Desenvolvimento da API
+🟢 Node.js + ✏️ JavaScript | Desenvolvimento da API <br>
 ⚡ Express.js | Auxilia no desenvolvimento da API <br>
 🍃 MongoDB  | Banco de dados <br>
 🧬 Mongoose  | Biblioteca ODM para a API <br>
