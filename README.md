@@ -22,3 +22,24 @@ Para o desenvolvimento da API foram usadas as tecnologias listadas abaixo, cada 
 🧬 Mongoose   <br>
 🔐 JWT (JSON Web Token)   <br>
 📘 Swagger   <br>
+
+<hr>
+<h3>❓ Como rodar o projeto?</h3>
+No seu computador, será necessário clonar o repositório. Após estar com a url em mãos, abra o 'git bash here' e use: <br>
+
+`git clone 'url_repositorio'`
+<br>
+Agora, abra o projeto na sua IDE de desenvolvimento, abra o terminal e instale as dependências com: <br>
+`npm install` <br>
+Caso elas não se instalem automaticamente, instale uma por uma: <br>
+`npm install nodemon` <br>
+`npm install express` <br>
+`npm install mongoose` <br>
+`npm install mongodb` <br>
+`npm install jsonwebtoken` <br>
+Por fim, basta utilizar o projeto, abra o swagger em: <br>
+`localhost:4000/api-docs/`<br>
+E posteriormente o Insomnia ou Postman para verificar como cada requisição se comporta na prática.
+<hr>
+
+<h3>Gustavo Lanna - 2025</h3>
