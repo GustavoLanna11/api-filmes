@@ -15,9 +15,9 @@ Esta é uma API RESTful voltada para o gerenciamento de um catálogo de filmes, 
 <hr>
 <h3>🛠️ Tecnologias</h3>
 
-🟢 Node.js + ✏️ JavaScript | Desenvolvimento da API <br>
-⚡ Express.js | Auxilia no desenvolvimento da API <br>
-🍃 MongoDB  | Banco de dados <br>
-🧬 Mongoose  | Biblioteca ODM para a API <br>
-🔐 JWT (JSON Web Token)  | Autenticação através de Token <br>
-📘 Swagger  | Documentação da API <br>
+🟢 Node.js + ✏️ JavaScript <br>
+⚡ Express.js <br>
+🍃 MongoDB  <br>
+🧬 Mongoose   <br>
+🔐 JWT (JSON Web Token)   <br>
+📘 Swagger   <br>
