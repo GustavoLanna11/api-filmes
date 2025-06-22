@@ -2,6 +2,15 @@
 import express from "express";
 const app = express();
 
+// importando dependências do swagger para documentar a API
+import swaggerUi from "swagger-ui-express";
+import swaggerJSDoc from "swagger-jsdoc";
+import swaggerOptions from "./config/swagger-config.js";
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
+// rota para acessar a documentação via SwaggerUI
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+
 // Importação do mongoose
 import mongoose from "mongoose"
 
