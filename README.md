@@ -1,9 +1,9 @@
 # api-filmes
-<h1>Sobre a API</h1>
+<h3>Sobre a API</h3>
 Esta é uma API RESTful voltada para o gerenciamento de um catálogo de filmes, permitindo que os usuários autenticados realizem cadastro, listagem, edição, visualização individual (ou total) e exclusão de filmes. Todo o fluxo é protegido por um sistema de autenticação com JSON Web Token (JWT).
 <hr>
 
-<h1>Funcionalidades 📌</h1> <br>
+<h3>📌 Funcionalidades </h3> <br>
 - ✅ Cadastro de usuários <br>
 - 🔐 Login com autenticação via JWT <br>
 - 🎞️ Cadastro de filmes <br>
