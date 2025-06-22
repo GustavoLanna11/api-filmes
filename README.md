@@ -4,7 +4,7 @@ Esta é uma API RESTful voltada para o gerenciamento de um catálogo de filmes, 
 <hr>
 
 <h3>📌 Funcionalidades </h3>
-
+Abaixo estão listadas todas as funcionalidades da API: <br>
 ✅ Cadastro de usuários <br>
 🔐 Login com autenticação via JWT <br>
 🎞️ Cadastro de filmes <br>
